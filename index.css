@@ -1,0 +1,38 @@
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: "sofia", cursive;
+}
+.sofia-regular {
+  font-family: "Sofia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  background-color: antiquewhite;
+}
+.card {
+  width: 30%;
+  height: 500px;
+  background-color: white;
+  margin: 25px 0;
+  border-radius: 10px;
+  border: 2px solid black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.container {
+  width: 90vw;
+  background-color: aquamarine;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
