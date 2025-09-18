@@ -47,6 +47,11 @@ body,
   font-weight: 700;
   font-style: italic;
 }
+.fascinate-regular {
+  font-family: "Fascinate", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
 
 body {
   background-color: #b5bdc4;
@@ -58,6 +63,7 @@ body {
   color: #307060;
   text-shadow: #729696 3px 3px 5px;
   margin: 20px;
+  font-family: "fascinate";
 }
 .card {
   width: 20vw;
@@ -76,10 +82,12 @@ body {
   transition: 0.3s;
 }
 .container {
-  width: auto;
+  width: 100vw;
+  height: 100vw;
   margin: auto;
+  padding: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   border-radius: 70px;
 }
@@ -92,14 +100,15 @@ body {
 
 .card-header {
   font-family: "Sofia", cursive;
-  font-size: 25px;
+  font-size: 21px;
   text-align: center;
   margin: 10px;
 }
 
 .card-img {
-  width: 200;
-  height: 200;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
 
 .text {
@@ -109,13 +118,48 @@ body {
 }
 @media screen and (max-width: 1000px) {
   .container {
-    flex-direction: column;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: auto;
+    
+    justify-content: space-around;
   }
   .card {
-    width: 100%;
+    width: 30%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: 60%%;
+    height: auto;
+  }
+  .container {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: auto;
+    justify-content: space-around;
   }
 }
 
+@media screen and (max-width: 600px) {
+  .card {
+    width: 60%;
+    height: auto;
+  }
+  .container {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: auto;
+    justify-content: space-around;
+  }
+  }
+}
 .card:hover {
   transform: scale(1.1);
 }
