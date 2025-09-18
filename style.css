@@ -60,7 +60,7 @@ body {
   margin: 20px;
 }
 .card {
-  width: 270;
+  width: 20vw;
   height: 400px;
   background-color: #e2e2e4;
   margin: 15px auto;
@@ -70,13 +70,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   box-shadow: #2d353d 10px 10px 20px;
   flex-wrap: wrap;
+  transition: 0.3s;
 }
 .container {
-  width: 90vw;
-  margin: 30px auto;
+  width: auto;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -105,4 +106,16 @@ body {
   font-size: 20px;
   margin: 5px;
   text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+.card:hover {
+  transform: scale(1.1);
 }
