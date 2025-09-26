@@ -25,7 +25,7 @@ if (temp >= 212) {
   console.log("water");
 }
  */
-
+/* 
 function enterCastle(hasKey, hasMagic, isBanned) {
   if ((hasKey === true || hasMagic) && !isBanned) {
     console.log("can enter castle");
@@ -34,5 +34,24 @@ function enterCastle(hasKey, hasMagic, isBanned) {
   }
 }
 enterCastle(true, true, true);
+ */
+function middle(x, y, z) {
+  if ((x >= y && x <= z) || (x >= z && x <= y)) {
+    console.log(x);
+  }
+  if ((y >= x && y <= z) || (y >= z && y <= y)) {
+    console.log(y);
+  } else {
+    console.log(z);
+  }
+}
+middle(10, 5, 8);
 
-function Medium
+function phone(a, b, c, d) {
+  if ((a === 8 || a === 9) && b === c && (d === 8 || d === 9)) {
+    console.log("ignore");
+  } else {
+    console.log("answer");
+  }
+}
+phone(9, 6, 6, 8);
