@@ -28,11 +28,33 @@ while (number > 0) {
 /* const name = "Alice";
 console.log(name[0]);
  */
+const sentence =
+  "The red cat sat on the mat., Why are you so sad cat?, Don't ask that";
+function lang(sentence) {
+  let s = 0;
+  let t = 0;
+  for (let i = 0; i < sentence.length; i++)
+    if (sentence[i] === "S" || sentence[i] === "s") {
+      s++;
+    }
+  if (sentence[i] === "T" || sentence[i] === "t") {
+    t++;
+  }
+  if (s > t) {
+    console.log("French");
+  }
+  if (t > s) {
+    console.log("English");
+  }
+}
+lang(sentence);
 
-function frenchEng(N, lines) {
-    const found = frenchEng.find((N)) => student == "s, S");
-    console.log(found);
-    if ((s && S > t && T))
-        console.log("French");
-     if ((t && T > s && S))
-        console.log("English");
+const spots = "5, CC..C, .CC..";
+function parking(spots) {
+  let C = 0;
+  for (let i = 0; i < spots.length; i++)
+    if (spots[i] === "C") {
+      C++;
+    }
+  console.log(C);
+}
