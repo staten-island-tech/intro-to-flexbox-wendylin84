@@ -33,12 +33,13 @@ const sentence =
 function lang(sentence) {
   let s = 0;
   let t = 0;
-  for (let i = 0; i < sentence.length; i++)
+  for (let i = 0; i < sentence.length; i++) {
     if (sentence[i] === "S" || sentence[i] === "s") {
       s++;
     }
-  if (sentence[i] === "T" || sentence[i] === "t") {
-    t++;
+    if (sentence[i] === "T" || sentence[i] === "t") {
+      t++;
+    }
   }
   if (s > t) {
     console.log("French");
@@ -49,12 +50,13 @@ function lang(sentence) {
 }
 lang(sentence);
 
-const spots = "5, CC..C, .CC..";
-function parking(spots) {
-  let C = 0;
-  for (let i = 0; i < spots.length; i++)
-    if (spots[i] === "C") {
-      C++;
+function parking(x, y) {
+  let c = 0;
+  for (let i = 0; i < x.length && y.length; i++) {
+    console.log(x[i], y[i]);
+    if (x[i] === "c" || y[i] === "c") {
+      c++;
     }
-  console.log(C);
+  }
 }
+parking("CC..C", ".CC..");
