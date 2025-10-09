@@ -97,7 +97,7 @@ const jewelry = [
   },
   {
     name:
-img:
+img: "https://i.ibb.co/4Rr2W2NZ/O1-CN01t9-Mn1-C1-Kj-Bq7npfzj-3973231199.jpg",
 alt: 
 metal: 
 price: 10.99,
@@ -105,7 +105,7 @@ price: 10.99,
   },
   {
     name:
-img: 
+img: "https://i.ibb.co/dJ2DQkGf/O1-CN01-VR7-WB51-Kj-Bvpwfbno-3973231199.jpg",
 alt:
 metal: 
 price: 10.99,
@@ -113,7 +113,7 @@ price: 10.99,
   },
   {
     name:
-img:
+img: "https://i.ibb.co/1cM5Tbw/O1-CN01-Ps-NB0s1-Kj-Bvbks-FEl-3973231199.jpg",
 alt: 
 metal: 
 price: 10.99,
@@ -121,7 +121,7 @@ price: 10.99,
   },
   {
     name:
-img:
+img: "https://i.ibb.co/Ndd7fqf8/O1-CN01-Pn-Rz061-Kj-Bv-Vq-NWFm-3973231199.jpg",
 alt: 
 metal: 
 price: 10.99,
@@ -129,7 +129,7 @@ price: 10.99,
   },
   {
     name:
-img:
+img: "https://i.ibb.co/fGM4Qvxg/O1-CN01p6-OBef1-Kj-Bpm-A3vrz-3973231199.jpg",
 alt: 
 metal: 
 price: 10.99,
@@ -137,7 +137,7 @@ price: 10.99,
   },
   {
     name:
-img:
+img: "https://i.ibb.co/mFgcZC8V/O1-CN01-Xq-KDPT1-Kj-Bq-Tbqf-C2-3973231199.jpg",
 alt: 
 metal: 
 price: 10.99,
@@ -145,7 +145,7 @@ price: 10.99,
   },
   {
     name:
-img: 
+img: "https://i.ibb.co/SD0bVncp/O1-CN01-AWKZWD1-Kj-Bp-ZZx-Bzj-3973231199.jpg",
 alt:
 metal: 
 price: 10.99,
@@ -153,7 +153,7 @@ price: 10.99,
   },
   {
     name:
-img:
+img: "https://i.ibb.co/nsKTpcY1/O1-CN01-GJ5-Pv-Y1-Kj-Bq-Vq-O2z-F-3973231199.jpg",
 alt: 
 metal: 
 price: 10.99,
