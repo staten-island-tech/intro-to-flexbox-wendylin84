@@ -164,12 +164,26 @@ function inject(jewelry) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML(
     "afterbegin",
-    `<div class="card">
+    `<div class="card" data-title="silver">
     <h2 class="card-header">${jewelry.name}</h2>
-      <img class="card-img" src="${jewelry.img}"/>
+      <img class="card-img" src="${jewelry.img}" alt="${jewelry.alt}"/>
       <p class="text">${jewelry.price}</p>
       <button class="card-price">Buy Now</button>
     </div>`
   );
 }
 jewelry.forEach((jewelry) => inject(jewelry));
+
+function getCards() {
+  const silver = document.querySelectorAll("silver");
+  const silverArr = Array.from(silver);
+  silverArr.forEach((silver) =>
+    silver.addEventListener("click", function (event) {
+      console.log(
+        event.target.closest(".card").getAttribute("data-title"),
+        event.target.textContent
+      );
+    })
+  );
+}
+getCards();
