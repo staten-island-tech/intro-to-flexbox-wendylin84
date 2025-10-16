@@ -168,10 +168,12 @@ function inject(jewelry) {
     <h2 class="card-header">${jewelry.name}</h2>
       <img class="card-img" src="${jewelry.img}" alt="${jewelry.alt}"/>
       <p class="text">${jewelry.price}</p>
-      <button class="card-price">Add to Cart</button>
+      <button class="cart-add">Add to Cart</button>
     </div>`
   );
 }
+jewelry.filter((jewelry) => jewelry.metal === "silver");
+jewelry.filter((jewelry) => jewelry.metal === "gold");
 jewelry.forEach((jewelry) => inject(jewelry));
 
 function getCards() {
@@ -184,12 +186,13 @@ function getCards() {
         /* event.target.textContent */
         event.target.closest(".card").getAttribute("data-name")
       );
-      let album = {
+      /*  let album = {
         name: document.getElementById("name").value,
         price: document.getElementById("price").value,
       };
-      inject(album);
+      inject(album); */
     })
   );
 }
 getCards();
+jewelry.find(jewelry.metal === "silver");
