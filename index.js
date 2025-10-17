@@ -172,13 +172,14 @@ function inject(jewelry) {
     </div>`
   );
 }
-jewelry.filter((jewelry) => jewelry.metal === "silver");
-jewelry.filter((jewelry) => jewelry.metal === "gold");
+/* jewelry.filter((jewelry) => jewelry.metal === "silver");
+jewelry.filter((jewelry) => jewelry.metal === "gold"); */
 jewelry.forEach((jewelry) => inject(jewelry));
 
 function getCards() {
   const buttons = document.querySelectorAll("button");
   const btnArr = Array.from(buttons);
+  /*   const newCard = document.createElement("card"); */
   btnArr.forEach((btn) =>
     btn.addEventListener("click", function (event) {
       console.log(
@@ -195,4 +196,8 @@ function getCards() {
   );
 }
 getCards();
-jewelry.find(jewelry.metal === "silver");
+/* const found = jewelry.find(jewelry === "silver");
+console.log(found); */
+function isSilver(jewelry) {
+  return jewelry.metal === "silver";
+}
