@@ -164,7 +164,7 @@ function inject(jewelry) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML(
     "afterbegin",
-    `<div class="card" data-title="${jewelry.price}" data-name="${jewelry.name}">
+    `<div class="card" data-title="${jewelry.price}" data-name="${jewelry.metal}">
     <h2 class="card-header">${jewelry.name}</h2>
       <img class="card-img" src="${jewelry.img}" alt="${jewelry.alt}"/>
       <p class="text">${jewelry.price}</p>
@@ -187,17 +187,55 @@ function getCards() {
         /* event.target.textContent */
         event.target.closest(".card").getAttribute("data-name")
       );
-      /*  let album = {
-        name: document.getElementById("name").value,
-        price: document.getElementById("price").value,
-      };
-      inject(album); */
     })
   );
 }
 getCards();
-/* const found = jewelry.find(jewelry === "silver");
-console.log(found); */
-function isSilver(jewelry) {
-  return jewelry.metal === "silver";
+btnArr.find(())
+
+function filterByGold() {
+  document
+    .getElementById("gold-filter")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+      let gold = {
+        name: document.getElementsByClassName("name").value,
+        img: document.getElementsByClassName("img").value,
+        metal: document.getElementsByClassName("metal").value,
+        price: document.getElementsByClassName("price").value,
+      };
+      inject(gold);
+    });
 }
+filterByGold();
+
+/* function filterByMetal(metal) {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => {
+    const cardCategory = card.getAttribute("data-name");
+    if (cardCategory === metal || cardCategory === "All") {
+      card.style.display = "flex"; //contextual
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+filterByMetal("Silver"); */
+
+function filterByMetal(metal) {
+  let display = document.querySelector("card");
+  display.innerHTML = "";
+  const filteredMetal = jewelry.filter((jewelry) => jewelry.metal === metal);
+  filteredMetal.forEach((jewelry) =>
+    display.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="card" data-title="${jewelry.price}" data-name="${jewelry.metal}">
+    <h2 class="card-header">${jewelry.name}</h2>
+      <img class="card-img" src="${jewelry.img}" alt="${jewelry.alt}"/>
+      <p class="text">${jewelry.price}</p>
+      <button class="cart-add">Add to Cart</button>
+    </div>`
+    )
+  );
+}
+filterByMetal("Silver");

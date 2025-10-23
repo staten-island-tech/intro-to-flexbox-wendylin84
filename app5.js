@@ -194,3 +194,55 @@ function getRGB() {
 }
 
 btn.addEventListener("click", getRGB);
+
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+let x = 0;
+while (x < 11) {
+  if (numbers.includes(x)) {
+    console.log("Found");
+  } else {
+    numbers.push(x);
+  }
+  x++;
+}
+console.log(numbers);
+
+function filterByGenre(genre) {
+  let display = document.querySelector("card");
+  display.innerHTML = "";
+  const filteredBooks = books.filter((book) => book.genre === genre);
+  filteredBooks.forEach((book) =>
+    display.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="card" data-title="${jewelry.price}" data-name="${jewelry.name}">
+    <h2 class="card-header">${jewelry.name}</h2>
+      <img class="card-img" src="${jewelry.img}" alt="${jewelry.alt}"/>
+      <p class="text">${jewelry.price}</p>
+      <button class="cart-add">Add to Cart</button>
+    </div>`
+    )
+  );
+}
+filterByGenre("Mystery");
+
+function filterByGenre(genre) {
+  const cards = document.querySelectorAll(".book-card");
+  cards.forEach((card) => {
+    const cardCategory = card.getAttribute("data-genre");
+    if (cardCategory === genre || cardCategory === "All") {
+      card.style.display = "flex"; //contextual
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+filterByGenre("Mystery");
+
+document.insertAdjacentHTML(
+  `<div class="card" data-title="${jewelry.price}" data-name="${jewelry.name}">
+    <h2 class="card-header">${jewelry.name}</h2>
+      <img class="card-img" src="${jewelry.img}" alt="${jewelry.alt}"/>
+      <p class="text">${jewelry.price}</p>
+      <button class="cart-add">Add to Cart</button>
+    </div>`
+);
