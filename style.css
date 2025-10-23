@@ -83,7 +83,7 @@ body {
 }
 .container {
   width: 100vw;
-  height: 100vw;
+  height: auto;
   margin: auto;
   padding: 10px;
   display: flex;
@@ -116,6 +116,33 @@ body {
   margin: 5px;
   text-align: center;
 }
+.all-button {
+  font-family: "Comic Neue", cursive;
+  font-size: 40px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.silver-button {
+  font-family: "Comic Neue", cursive;
+  font-size: 40px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gold-button {
+  font-family: "Comic Neue", cursive;
+  font-size: 40px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @media screen and (max-width: 1000px) {
   .container {
     flex-direction: row;
@@ -123,11 +150,18 @@ body {
     flex-wrap: wrap;
     padding: 10px;
     margin: auto;
-
     justify-content: space-around;
   }
   .card {
     width: 30%;
+  }
+  .all-button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    margin: auto;
   }
 }
 @media screen and (max-width: 800px) {
@@ -142,6 +176,14 @@ body {
     padding: 10px;
     margin: auto;
     justify-content: space-around;
+  }
+  .all-button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    margin: auto;
   }
 }
 

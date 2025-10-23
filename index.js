@@ -243,6 +243,9 @@ function filterByButton() {
   const btnArr = Array.from(buttons);
   btnArr.forEach((btn) =>
     btn.addEventListener("click", function (event) {
+      if (btn.id === "no-filter") {
+        filterByMetal("All");
+      }
       if (btn.id === "gold-filter") {
         filterByMetal("gold");
       }
