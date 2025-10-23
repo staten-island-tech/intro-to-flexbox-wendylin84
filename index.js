@@ -35,7 +35,7 @@ const jewelry = [
     name: "Lime decorative bracelet",
     img: "https://i.ibb.co/wZk0jpTY/O1-CN01e3-Pn-Ug1-Kj-Bp-Wde9ok-3973231199.jpg",
     alt: "Lime decorative bracelet",
-    metal: "gold",
+    metal: "silver",
     price: 10.99,
     inStock: true,
   },
@@ -191,9 +191,8 @@ function getCards() {
   );
 }
 getCards();
-btnArr.find(())
 
-function filterByGold() {
+/* function filterByGold() {
   document
     .getElementById("gold-filter")
     .addEventListener("click", function (e) {
@@ -207,7 +206,7 @@ function filterByGold() {
       inject(gold);
     });
 }
-filterByGold();
+filterByGold(); */
 
 /* function filterByMetal(metal) {
   const cards = document.querySelectorAll(".card");
@@ -223,7 +222,7 @@ filterByGold();
 filterByMetal("Silver"); */
 
 function filterByMetal(metal) {
-  let display = document.querySelector("card");
+  let display = document.querySelector(".container");
   display.innerHTML = "";
   const filteredMetal = jewelry.filter((jewelry) => jewelry.metal === metal);
   filteredMetal.forEach((jewelry) =>
@@ -238,4 +237,19 @@ function filterByMetal(metal) {
     )
   );
 }
-filterByMetal("Silver");
+
+function filterByButton() {
+  const buttons = document.querySelectorAll("button");
+  const btnArr = Array.from(buttons);
+  btnArr.forEach((btn) =>
+    btn.addEventListener("click", function (event) {
+      if (btn.id === "gold-filter") {
+        filterByMetal("gold");
+      }
+      if (btn.id === "silver-filter") {
+        filterByMetal("silver");
+      }
+    })
+  );
+}
+filterByButton();
