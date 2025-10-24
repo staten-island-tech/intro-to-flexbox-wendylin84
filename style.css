@@ -2,7 +2,7 @@ html,
 body,
 * {
   margin: 0;
-  padding: 0;
+  /*   padding: 0; */
   box-sizing: border-box;
   font-size: 30px;
   font-family: "sofia", cursive;
@@ -59,10 +59,10 @@ body {
 .head {
   text-align: center;
   padding: 20px;
-  font-size: 80px;
+  font-size: 90px;
   color: #f0ecff;
   text-shadow: #827296 3px 3px 5px;
-  margin: 20px;
+  margin: 15px;
   font-family: "fascinate";
 }
 .card {
@@ -80,6 +80,13 @@ body {
   box-shadow: #2d353d 10px 10px 20px;
   flex-wrap: wrap;
   transition: 0.3s;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  margin: auto;
 }
 .container {
   width: 100vw;
@@ -118,29 +125,24 @@ body {
 }
 .all-button {
   font-family: "Comic Neue", cursive;
-  font-size: 40px;
-  margin: auto;
+  font-size: 39px;
+  margin-left: auto;
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .silver-button {
   font-family: "Comic Neue", cursive;
-  font-size: 40px;
-  margin: auto;
+  font-size: 39px;
+  margin-left: 10px;
+  margin-right: 10px;
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .gold-button {
   font-family: "Comic Neue", cursive;
-  font-size: 40px;
-  margin: auto;
+  font-size: 39px;
+  margin-right: auto;
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1000px) {
@@ -155,11 +157,11 @@ body {
   .card {
     width: 30%;
   }
-  .all-button {
+  .filter-buttons {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 10px;
     margin: auto;
   }
@@ -177,7 +179,7 @@ body {
     margin: auto;
     justify-content: space-around;
   }
-  .all-button {
+  .filter-buttons {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -199,6 +201,14 @@ body {
     padding: 10px;
     margin: auto;
     justify-content: space-around;
+  }
+  .filter-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    margin: auto;
   }
 }
 .card:hover {
