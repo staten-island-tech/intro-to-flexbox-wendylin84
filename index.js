@@ -187,10 +187,16 @@ function getCards() {
         /* event.target.textContent */
         event.target.closest(".card").getAttribute("data-name")
       );
-    })
+      /* const productObj = cart-add.find((prod) => prod.name === selectedproduct);
+      cart.push(productObj);
+      console.log(cart); 
+    }) */
   );
 }
 getCards();
+
+function addToCart() {
+
 
 /* function filterByGold() {
   document
@@ -244,7 +250,7 @@ function filterByButton() {
   btnArr.forEach((btn) =>
     btn.addEventListener("click", function (event) {
       if (btn.id === "no-filter") {
-        filterByMetal("All");
+        filterByMetal("all");
       }
       if (btn.id === "gold-filter") {
         filterByMetal("gold");
