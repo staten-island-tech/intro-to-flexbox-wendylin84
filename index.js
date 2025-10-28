@@ -195,10 +195,8 @@ function getCards() {
 }
 getCards();
 
-function addToCart() {
 
-
-/* function filterByGold() {
+function filterByGold() {
   document
     .getElementById("gold-filter")
     .addEventListener("click", function (e) {
@@ -212,7 +210,7 @@ function addToCart() {
       inject(gold);
     });
 }
-filterByGold(); */
+filterByGold();
 
 /* function filterByMetal(metal) {
   const cards = document.querySelectorAll(".card");
