@@ -65,6 +65,15 @@ body {
   margin: 15px;
   font-family: "fascinate";
 }
+.head-two {
+  text-align: center;
+  padding: 20px;
+  font-size: 85px;
+  color: #f0ecff;
+  text-shadow: #827296 3px 3px 5px;
+  margin: 15px;
+  font-family: "fascinate";
+}
 .card {
   width: 20vw;
   height: 400px;
@@ -143,6 +152,17 @@ body {
   font-size: 39px;
   margin-right: auto;
   text-align: center;
+}
+.cart {
+  width: 100vw;
+  height: auto;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius: 70px;
+  border-color: #2d353d;
 }
 
 @media screen and (max-width: 1000px) {

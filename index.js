@@ -189,28 +189,11 @@ function getCards() {
       );
       /* const productObj = cart-add.find((prod) => prod.name === selectedproduct);
       cart.push(productObj);
-      console.log(cart); 
-    }) */
+      console.log(cart); */
+    })
   );
 }
 getCards();
-
-
-function filterByGold() {
-  document
-    .getElementById("gold-filter")
-    .addEventListener("click", function (e) {
-      e.preventDefault();
-      let gold = {
-        name: document.getElementsByClassName("name").value,
-        img: document.getElementsByClassName("img").value,
-        metal: document.getElementsByClassName("metal").value,
-        price: document.getElementsByClassName("price").value,
-      };
-      inject(gold);
-    });
-}
-filterByGold();
 
 /* function filterByMetal(metal) {
   const cards = document.querySelectorAll(".card");
