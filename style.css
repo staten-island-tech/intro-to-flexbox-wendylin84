@@ -74,6 +74,9 @@ body {
   margin: 15px;
   font-family: "fascinate";
 }
+.background {
+  background-color: #ffffff;
+}
 .card {
   width: 20vw;
   height: 400px;
@@ -93,7 +96,7 @@ body {
 .filter-buttons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 10px;
   margin: auto;
 }
@@ -153,17 +156,6 @@ body {
   margin-right: auto;
   text-align: center;
 }
-.cart {
-  width: 100vw;
-  height: auto;
-  margin: auto;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  border-radius: 70px;
-  border-color: #2d353d;
-}
 
 @media screen and (max-width: 1000px) {
   .container {
@@ -181,7 +173,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 10px;
     margin: auto;
   }
@@ -203,7 +195,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     padding: 10px;
     margin: auto;
   }
@@ -226,7 +218,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     padding: 10px;
     margin: auto;
   }

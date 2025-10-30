@@ -187,7 +187,7 @@ function getCards() {
         /* event.target.textContent */
         event.target.closest(".card").getAttribute("data-name")
       );
-      /* const productObj = cart-add.find((prod) => prod.name === selectedproduct);
+      /* const productObj = cart-add.find((jewelry) => jewelry.name === selectedproduct);
       cart.push(productObj);
       console.log(cart); */
     })
@@ -230,14 +230,14 @@ function filterByButton() {
   const btnArr = Array.from(buttons);
   btnArr.forEach((btn) =>
     btn.addEventListener("click", function (event) {
-      if (btn.id === "no-filter") {
-        filterByMetal("all");
-      }
       if (btn.id === "gold-filter") {
         filterByMetal("gold");
       }
       if (btn.id === "silver-filter") {
         filterByMetal("silver");
+      }
+      if (btn.id === "no-filter") {
+        filterByMetal("all");
       }
     })
   );
