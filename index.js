@@ -164,7 +164,7 @@ function inject(jewelry) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML(
     "afterbegin",
-    `<div class="card" data-title="${jewelry.price}" data-name="${jewelry.metal}">
+    `<div class="card" data-title="${jewelry.price}" data-name="${jewelry.name}">
     <h2 class="card-header">${jewelry.name}</h2>
       <img class="card-img" src="${jewelry.img}" alt="${jewelry.alt}"/>
       <p class="text">${jewelry.price}</p>
@@ -195,6 +195,19 @@ function getCards() {
 }
 getCards();
 
+function addToCart() {
+  e.preventDefault();
+  const cart = document.getElementById("name");
+  let selectedProduct = {
+    name: document.getElementById("name").value,
+    price: document.getElementById("price").value,
+  };
+  document.addEventListener("click", function (event) {
+    const product = cart.find((jewelry) => jewelry.name === selectedProduct);
+    cart.push(product);
+    console.log(cart);
+  });
+}
 /* function filterByMetal(metal) {
   const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
@@ -232,6 +245,7 @@ function filterByButton() {
     btn.addEventListener("click", function (event) {
       if (btn.id === "gold-filter") {
         filterByMetal("gold");
+        /*      let filteredArr = arr.filter((item) => item.id === 2); */
       }
       if (btn.id === "silver-filter") {
         filterByMetal("silver");
