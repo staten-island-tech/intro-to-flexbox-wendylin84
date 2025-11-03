@@ -329,14 +329,17 @@ function filterByButton() {
     btn.addEventListener("click", function (event) {
       if (btn.id === "gold-filter") {
         filterByMetal("gold");
+        addToCart();
       }
       if (btn.id === "silver-filter") {
         filterByMetal("silver");
+        addToCart();
       }
       if (btn.id === "no-filter") {
         let display = document.querySelector(".container");
         display.innerHTML = "";
         jewelry.forEach((jewelry) => inject(jewelry));
+        addToCart();
       }
     })
   );
