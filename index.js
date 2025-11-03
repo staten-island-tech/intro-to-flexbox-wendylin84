@@ -160,6 +160,7 @@ const jewelry = [
     inStock: true,
   },
 ];
+
 function inject(jewelry) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML(
@@ -168,13 +169,84 @@ function inject(jewelry) {
     <h2 class="card-header">${jewelry.name}</h2>
       <img class="card-img" src="${jewelry.img}" alt="${jewelry.alt}"/>
       <p class="text">${jewelry.price}</p>
-      <button class="cart-add">Add to Cart</button>
+      <button class="cart-add" id="form">Add to Cart</button>
     </div>`
   );
 }
-/* jewelry.filter((jewelry) => jewelry.metal === "silver");
-jewelry.filter((jewelry) => jewelry.metal === "gold"); */
+
 jewelry.forEach((jewelry) => inject(jewelry));
+/* let cart = []; // Initialize an empty cart array
+
+function addItemToCart(name) {
+  const existingItemIndex = cart.findIndex((jewelry) => jewelry.name === name);
+  if (existingItemIndex > -1) {
+    // Item already in cart, increment quantity
+    cart[existingItemIndex].quantity + 1;
+  } else {
+    // Add new item to cart with quantity 1
+    cart.push({ ...name, quantity: 1 });
+  }
+}
+function addCart() {
+  const buttons = document.querySelectorAll("#form");
+  const btnArr = Array.from(buttons);
+  const cart = document.querySelector(".cart");
+  btnArr.forEach((btn) =>
+    btn.addEventListener("click", function (event) {
+      event.preventDefault(); // stops page from refreshing
+      cart.insertAdjacentHTML(
+        "afterbegin",
+        `<div class="card" data-title="${jewelry.price}" data-name="${jewelry.name}">
+    <h2 class="card-header">${jewelry.name}</h2>
+      <img class="card-img" src="${jewelry.img}" alt="${jewelry.alt}"/>
+      <p class="text">${jewelry.price}</p>
+      <button class="cart-delete" data-card-id="card-1">Remove from Cart</button>
+    </div>`
+      );
+    })
+  );
+}
+addCart();
+function removeCart() {
+  const buttons = document.querySelectorAll(".cart-delete");
+  const btnArr = Array.from(buttons);
+  btnArr.forEach((btn) =>
+    btn.addEventListener("click", function (event) {
+      event.preventDefault(); // stops page from refreshing
+      event.target.parentElement.remove();
+    })
+  );
+}
+removeCart(); */
+let cartTotal = 0;
+
+function addToCart() {
+  const buttons = document.querySelectorAll("button");
+  buttons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      let jewelryName = event.target
+        .closest(".card")
+        .querySelector("h2").textContent;
+      let jewelryPrice = event.target
+        .closest(".card")
+        .querySelector("p").textContent;
+
+      document.querySelector(".cart").insertAdjacentHTML(
+        "afterbegin",
+        `<div class="cart-item">
+        <h2>${jewelryName}</h2> 
+        <p>${jewelryPrice}</p>
+        </div>`
+      );
+      cartTotal = cartTotal + Number(jewelryPrice);
+      document.querySelector(".cartTotal").textContent = "";
+      document
+        .querySelector(".cartTotal")
+        .insertAdjacentHTML("afterbegin", `<h4>Total: $${cartTotal}</h4>`);
+    });
+  });
+}
+addToCart();
 
 function getCards() {
   const buttons = document.querySelectorAll("button");
@@ -182,32 +254,44 @@ function getCards() {
   /*   const newCard = document.createElement("card"); */
   btnArr.forEach((btn) =>
     btn.addEventListener("click", function (event) {
+      event.preventDefault();
       console.log(
         event.target.closest(".card").getAttribute("data-title"),
         /* event.target.textContent */
         event.target.closest(".card").getAttribute("data-name")
       );
-      /* const productObj = cart-add.find((jewelry) => jewelry.name === selectedproduct);
-      cart.push(productObj);
-      console.log(cart); */
     })
   );
 }
 getCards();
 
+/*
 function addToCart() {
-  e.preventDefault();
-  const cart = document.getElementById("name");
-  let selectedProduct = {
-    name: document.getElementById("name").value,
-    price: document.getElementById("price").value,
-  };
-  document.addEventListener("click", function (event) {
-    const product = cart.find((jewelry) => jewelry.name === selectedProduct);
-    cart.push(product);
-    console.log(cart);
+  const addedItems = document.querySelectorAll(".cart-add");
+  addedItems.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      const productToAdd = products[index];
+      cart.push(productToAdd);
+    });
   });
 }
+addToCart();
+ */
+/* function newCart() {
+  container.innerHTML = "";
+  let total = 0;
+  cart.forEach((jewelry) => {
+    const html = `<div class="card" data-title="${jewelry.price}" data-name="${jewelry.name}">
+    <h2 class="card-header">${jewelry.name}</h2>
+      <img class="card-img" src="${jewelry.img}" alt="${jewelry.alt}"/>
+      <p class="text">${jewelry.price}</p>
+      <button class="cart-add">Add to Cart</button>
+    </div>
+        `;
+    container.innerHTML += html;
+    total += jewelry.price;
+  });
+} */
 /* function filterByMetal(metal) {
   const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
@@ -245,13 +329,14 @@ function filterByButton() {
     btn.addEventListener("click", function (event) {
       if (btn.id === "gold-filter") {
         filterByMetal("gold");
-        /*      let filteredArr = arr.filter((item) => item.id === 2); */
       }
       if (btn.id === "silver-filter") {
         filterByMetal("silver");
       }
       if (btn.id === "no-filter") {
-        filterByMetal("all");
+        let display = document.querySelector(".container");
+        display.innerHTML = "";
+        jewelry.forEach((jewelry) => inject(jewelry));
       }
     })
   );

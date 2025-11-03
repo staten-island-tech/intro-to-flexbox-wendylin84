@@ -6,6 +6,7 @@ body,
   box-sizing: border-box;
   font-size: 30px;
   font-family: "sofia", cursive;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 .sofia-regular {
   font-family: "Sofia", cursive;
@@ -63,7 +64,7 @@ body {
   color: #f0ecff;
   text-shadow: #827296 3px 3px 5px;
   margin: 15px;
-  font-family: "fascinate";
+  font-family: "Fascinate";
 }
 .head-two {
   text-align: center;
@@ -72,10 +73,29 @@ body {
   color: #f0ecff;
   text-shadow: #827296 3px 3px 5px;
   margin: 15px;
-  font-family: "fascinate";
+  font-family: "Fascinate";
 }
 .cart {
-  background-color: #ffffff;
+  background-color: #d9dcde;
+  width: 100vw;
+  height: auto;
+  margin: auto;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: 70px;
+  border: 6px solid #ffffff;
+}
+.cartTotal {
+  text-align: center;
+  vertical-align: top;
+  font-size: 85px;
+  color: #f0ecff;
+  text-shadow: #827296 3px 3px 5px;
+  margin: 15px;
+  font-family: "Fascinate";
 }
 .card {
   width: 20vw;
@@ -108,7 +128,6 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  border-radius: 70px;
 }
 .cart-add {
   font-family: "Comic Neue", cursive;
@@ -176,6 +195,14 @@ body {
     justify-content: space-around;
     padding: 10px;
     margin: auto;
+  }
+  .cart {
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: auto;
+    justify-content: space-around;
   }
 }
 @media screen and (max-width: 800px) {
